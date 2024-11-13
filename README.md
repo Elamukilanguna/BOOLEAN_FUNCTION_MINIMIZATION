@@ -17,6 +17,22 @@ Hardware – PCs, Cyclone II , USB flasher
 **Theory**
 
 **Logic Diagram**
+![LOGIC DIAGRAM EXP-1-1](https://github.com/user-attachments/assets/7762c386-7742-4d9b-be22-dde71bf0d9fd)
+
+module function1(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+endmodule
+
+
+![LOGIC DIAGRAM 2-2](https://github.com/user-attachments/assets/77e4a106-931a-444a-989b-396d7ecfc777)
+
+module function2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y & z)|( w & y )|(x & y));
+endmodule
 
 **Procedure**
 
@@ -35,41 +51,19 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
-```/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-Developed by: Elamukilan.g
-RegisterNumber:212223040045
-*/
-
-module DE2(A,B,C,D,W,X,Y,Z,F1,F2);
-input A,B,C,D,W,X,Y,Z;
-wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
-output F1,F2;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign x6=(X)&(~Y)&(Z);
-assign x7=(~X)&(~Y)&(Z);
-assign x8=(~W)&(X)&(Y);
-assign x9=(W)&(~X)&(Y);
-assign x10=(W)&(X)&(Y);
-assign F1=x1|x2|x3|x4|x5;
-assign F2=x6|x7|x8|x9|x10;
-endmodule
-```
+Developed by: Kesavan S 
+RegisterNumber: 24003333 */
 
 
 **RTL realization**
-![image](https://github.com/user-attachments/assets/d6b079e6-0594-4e51-8725-d9b82a138d89)
-
 
 **Output:**
-![image](https://github.com/user-attachments/assets/35646dbd-18bb-4507-b4a8-11ad6cbb9325)
-
 
 **RTL**
+![RTL EXP 2-1](https://github.com/user-attachments/assets/2fefefee-9556-4449-9416-90439108e73c)
+
+![RTL 2-2](https://github.com/user-attachments/assets/32ac5b92-a6f5-4642-a9c0-baa2ae53381c)
+
 
 **Timing Diagram**
 
